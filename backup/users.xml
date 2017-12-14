@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="Style.css" ?>
+<USERS>
+   
+   <USER>
+      <USERNAME>NeoborgCubist</USERNAME>
+      <IPADDRESS>666.32.198.169</IPADDRESS>
+      <HIGHSCORE>1</HIGHSCORE>
+   </USER>
+
+   <USER>
+      <USERNAME>Shinies!</USERNAME>
+      <IPADDRESS>666.32.198.169</IPADDRESS>
+      <HIGHSCORE>2</HIGHSCORE>
+   </USER>
+
+   <USER>
+      <USERNAME>PotatoLord73</USERNAME>
+      <IPADDRESS>666.32.198.169</IPADDRESS>
+      <HIGHSCORE>3</HIGHSCORE>
+   </USER>
+
+   <USER>
+      <USERNAME>Smallfry</USERNAME>
+      <IPADDRESS>666.32.198.169</IPADDRESS>
+      <HIGHSCORE>4</HIGHSCORE>
+   </USER>
+
+   <USER>
+      <USERNAME>Excaliburrrr</USERNAME>
+      <IPADDRESS>777.32.198.169</IPADDRESS>
+      <HIGHSCORE>6</HIGHSCORE>
+   </USER>
+   
+</USERS>

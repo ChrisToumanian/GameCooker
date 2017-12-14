@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GameCooker API Documentation</title>
+	<link rel="stylesheet" href="documentation.css">
+	<link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+
+	<!-- Game Canvas -->
+	<div class="intro">
+
+		<h1>GameCooker API Documentation</h1>
+
+		<h3><b>GameCooker is a lightweight JavaScript game engine. </b>
+		GameCooker is an attempt to expose the good parts of JavaScript for game creation in a simple way.
+		The game engine has multiple preset utilities you can refer to with this simple API. You design games by creating templates for levels and game objects.</h3>
+		
+		<h2>Getting Started</h2>
+
+		<h3>If you do not have access to an FTP server and would like to try out the game engine, you can download a zip it <a href="http://devdocs.io/javascript/">here</a>. 
+		Extract it to a folder and drag index.html into a web browser to launch your game. Any of the text files can be modified in a standard text editor and changes will be 
+		updated when you refresh the page. For editing code without an IDE <a href="https://notepad-plus-plus.org/">Notepad++</a> 
+		and <a href="https://code.visualstudio.com/?utm_expid=101350005-21.ckupCbvGQMiML5eJsxWmxw.0&utm_referrer=https%3A%2F%2Fwww.google.com%2F">Visual Studio Code</a> 
+		are lightweight and extremely helpful, completing syntax for you, providing dropdown lists of what APIs can be accessed, and correctly indenting.
+
+		</br></br>
+
+		Begin by creating new gameObject prototype JavaScript files. Instantiate the objects you would like in level01.js. Add as many levels as you'd like and load them at any time.
+
+		</br></br>
+
+		You can get started immediately by opening level01.js. This is loaded when the game first begins and it defines where every GameObject will be located on the screen 
+		through the function <code>spawn();</code>. Just tell it which objects you'd like to be in the level and where.
+		Each GameObject requires its own script, such as coin.js, or angrysun.js, to work.
+		They begin with a constructor such as <code>GameObject.prototype.Coin = function(){}</code> to work.
+		All GameObjects inherit the properties and functions of their parent class, located in gameobject.js, so you can use them freely and modify them to anything you'd like.
+		GameObjects default to an invisible, red colored square unless told otherwise. They can be given images and sounds to play if you declare them on the bottom of the script.
+		See the scripts in the Mario themed example game for correct usage.
+
+		</br></br>
+
+		If you're curious about what some JavaScript syntax or a command means, I recommend checking out <a href="http://devdocs.io/javascript/">devdocs.io</a> or
+		<a href="http://www.w3schools.com/js/js_objects.asp">w3schools.com</a>. Enjoy!
+
+		</h3>
+
+		<h2>Game Engine</h2>
+			<h3>The JavaScript file <code>gameengine.js</code> is where <code>Main()</code> is located and where the game begins.
+			It also takes care of the game loop, display properties and drawing to the HTML5 canvas. You don't have to modify this script,
+			but you can modify any of its settings from any gameObject.</h3>
+			<table><tbody>
+				<tr><td><code>Game.network.enabled</code></td><td>Set to true or false to enable network settings such as IP-location saving and leaderboards.</td></tr>
+				<tr><td><code>Game.difficulty</code></td><td>Set the game difficulty to a setting like "easy," "normal," or "hard."</td></tr>
+				<tr><td><code>Game.diagnostics</code></td><td>Enable or disable the diagnostics HUD that contains FPS and object calls.</td></tr>
+				<tr><td><code>Game.time</code></td><td>Set how quickly the game runs, 1 for a normal speed and 0 for paused.</td></tr>
+			</tbody></table>
+			<table><tbody>
+				<tr><td><code>Display.width</code></td><td>Set the width of the display/game canvas.</td></tr>
+				<tr><td><code>Display.height</code></td><td>Set the height of the display/game canvas.</td></tr>
+				<tr><td><code>Display.FPS</code></td><td>Updates to show the current frames per second.</td></tr>
+				<tr><td><code>Display.maxFPS</code></td><td>Sets the maximum frames per second the game tries to run at.</td></tr>
+				<tr><td><code>Display.bgColor</code></td><td>Set the background color rendered first behind all gameObjects.</td></tr>
+			</tbody></table>
+
+		<h2>Player</h2>
+			<h3><b>The Player class is an object that holds information about the current player.</b> It is instantiated from the GameEngine when the page is first loaded
+			and immediately checks for the player's IP address and looks up a matching username.</h3>
+			<table><tbody>
+				<tr><td><code>Player.username</code></td><td>Sets the <code>Player</code> username.</td></tr>
+				<tr><td><code>Player.ID</code></td><td>Sets the ID of the <code>Player</code>, if there are multiple players.</td></tr>
+				<tr><td><code>Player.IP</code></td><td>Sets the <code>Player</code> IP address.</td></tr>
+				<tr><td><code>Player.score</code></td><td>The player's score for the current level.</td></tr>
+				<tr><td><code>Player.highScore</code></td><td>The player's highest recorded score.</td></tr>
+				<tr><td><code>Player.leader[#]</code></td><td>Stores the highest leaderboard scores.</td></tr>
+				<tr><td><code>Player.getIP()</code></td><td>Function that sets the player's IP address.</td></tr>
+				<tr><td><code>Player.getHighScore()</code></td><td>Retrieves the player's highest recorded score.</td></tr>
+				<tr><td><code>Player.getLeaderboard()</code></td><td>Gets the top leaderboard users and sets <code>Player.leader[#]</code></td></tr>
+			</tbody></table>
+
+		<h2>Level</h2>
+			<h3>The Level stores information for what GameObjects and music are loaded when a level begins and where. The first level to load is level01.js.
+				More can be created and spawned.
+			</h3>
+
+		<h2>GameObject</h2>
+			<h3>Everything on the screen in a game is a GameObject and requires an individual script to define information about how it looks and behaves. 
+				GameObjects inherit their properties and functions from gameobject.js. The <code>update()</code> routine of every GameObject is called once per frame.
+			</h3>
+
+		<h2>Input</h2>
+			<h3>This is a utility for checking to see if specific keys, gamepad buttons are pressed or the mouse is moving.</h3>
+
+	</div>
+	
+	<br><br>
+
+</body>
+
+</html>
