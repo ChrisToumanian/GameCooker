@@ -8,7 +8,7 @@ function GameObject(spawnPosX, spawnPosY, spawnPosZ, name){
 	this.name = name;
 	this.tags = [];
 	this.width = 10;
-    this.height = 10;
+    	this.height = 10;
 	this.position = [];
 	this.position.x = spawnPosX;
 	this.position.y = spawnPosY;
